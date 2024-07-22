@@ -1,0 +1,28 @@
+I use typespec to generate a c# application. A change has been made to the typespec and I want to see if I need to make changes to my c# application. Below is the type spec files that have been changed or added:
+<typespecfiles>
+
+
+These the existing file names of in application. 
+<appfiles>
+
+
+
+Which of these files do you think I might need to update or do add? 
+
+Give your response as json in the format below. I need to parse your repsonse as json so no examples, header or footer. Please do not include "```json" at the top or "```" at the bottom. 
+The files should match the paths given above. For example if a new controller is needed it should be listed as living in the controllers path. 
+I've provided a list of existing files, so those files should NEVER appear in the "newFiles " array. If you think the changes to type spec affect existing files then they need to appear in the "updatedFiles" section.
+{
+    "newFiles":[
+        "C:\\Dev\\TecmoTourney\\Orchestration\\PlayerTournamentOrchestration.cs",
+        "C:\\Dev\\TecmoTourney\\Orchestration\\PlayerTournamentOrchestration.cs"
+    ],
+    
+    "updatedFiles":[
+        "C:\\Dev\\TecmoTourney\\DataAccess\\Interfaces\\ITournamentsDAO.cs"
+    ];
+}
+
+
+Here are some tips:
+- if you think a model needs to be updated then the DAO model will need to be updated toos

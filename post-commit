@@ -1,0 +1,21 @@
+echo "Post-commit script executed."
+
+#!/bin/sh
+echo "Executing post-commit hook V2"
+
+#!/bin/sh
+
+# Get the list of committed files
+files=$(git diff-tree --no-commit-id --name-only -r HEAD)
+
+# Convert files list to Windows-style paths and pass them to the executable
+for file in $files
+do
+    files_win="$files_win $(cygpath -w "$file")"
+done
+
+# Path to your executable
+executable_path="C:\\dev\\typespec-code-converter\\bin\\Debug\\net8.0\\TempSpecCodeUpdate.exe"
+
+# Execute the executable with the list of committed files
+"$executable_path" $files_win
